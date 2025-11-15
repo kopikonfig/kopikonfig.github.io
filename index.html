@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page Jualan High Conversion - Kopikonfig.id</title>
+    <!-- Memuat Tailwind CSS - Menggunakan CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Menggunakan font Inter */
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #1f2937;
+        }
+        /* Style kustom untuk CTA yang menonjol */
+        .cta-prime {
+            transition: transform 0.2s, box-shadow 0.2s;
+            /* Pastikan animasi tidak terlalu mengganggu di mobile */
+            animation: pulse 2s infinite; 
+        }
+        .cta-prime:hover {
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 10px 20px rgba(22, 101, 216, 0.5); /* Blue shadow */
+            animation: none;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(22, 101, 216, 0.4); }
+            70% { transform: scale(1.01); box-shadow: 0 0 0 15px rgba(22, 101, 216, 0); }
+            100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(22, 101, 216, 0); }
+        }
+        /* Mengurangi section-padding agar tidak terlalu besar di hero, lalu menggunakan pt-28 di hero */
+        .section-padding { padding-top: 5rem; padding-bottom: 5rem; }
+
+        /* Style untuk Floating WhatsApp Button - Z-Index Tinggi untuk mencegah tumpukan */
+        .floating-whatsapp {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000; 
+            transition: transform 0.3s;
+        }
+        .floating-whatsapp:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+
+    <!-- HEADER: Z-INDEX DITINGKATKAN KE Z-50 UNTUK KEPASTIAN STACKING ORDER -->
+    <header class="sticky top-0 bg-white shadow-lg z-50 py-3">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
+            <div class="text-2xl font-extrabold text-indigo-700">Kopikonfig.id</div>
+            <a href="https://wa.me/62882007952010?text=Halo%20saya%20tertarik%20dengan%20Landing%20Page%20Konversi" target="_blank" class="px-3 sm:px-4 py-2 bg-green-500 text-white font-semibold rounded-lg text-sm sm:text-base hover:bg-green-600 transition duration-150">
+                <span class="hidden sm:inline">Konsultasi WA Cepat</span>
+                <span class="sm:hidden">Chat WA</span>
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <!-- 1. HERO SECTION (Padding Top PT-28 untuk kompensasi tinggi header) -->
+        <section id="hero" class="pt-28 pb-20 bg-indigo-700 text-white relative overflow-hidden">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-0">
+                <!-- Headline Kuat -->
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-4 leading-tight">
+                    Bangun Website & Aplikasi Bisnis Anda. <span class="block text-yellow-300">Cepat, Rapi, dan Siap Closing!</span>
+                </h1>
+                <!-- Subheadline -->
+                <p class="text-lg sm:text-xl opacity-90 max-w-4xl mx-auto mb-8 font-light">
+                    Solusi digital untuk UMKM, lembaga, dan semua bisnis yang ingin naik kelas tanpa ribet. Kami fokus mengubah *traffic* menjadi **penjualan nyata** dalam 3-7 hari kerja.
+                </p>
+                <!-- Tombol CTA Utama - Responsif Text Sizing -->
+                <a href="https://wa.me/62882007952010?text=Halo%20saya%20tertarik%20dengan%20Landing%20Page%20Konversi%203%20Hari" target="_blank" class="cta-prime inline-block px-8 sm:px-12 py-3 sm:py-4 bg-yellow-400 text-indigo-900 font-bold text-xl sm:text-2xl rounded-xl shadow-2xl hover:bg-yellow-500 focus:outline-none focus:ring-4 focus:ring-yellow-300">
+                    KLIK SINI: Konsultasi & Blueprint GRATIS!
+                </a>
+                
+                <!-- Trust Badges - Menggunakan flex-wrap dan jarak yang lebih kecil di mobile -->
+                <div class="mt-8 flex flex-wrap justify-center gap-4 sm:space-x-6 text-sm sm:text-base font-semibold">
+                    <span class="flex items-center"><span class="text-yellow-400 mr-2">⭐</span> Trusted by UMKM</span>
+                    <span class="flex items-center"><span class="text-yellow-400 mr-2">🔧</span> Gratis Konsultasi</span>
+                    <span class="flex items-center"><span class="text-yellow-400 mr-2">⚡</span> Selesai 3–7 Hari</span>
+                </div>
+                
+                <!-- Visual Mockup Placeholder -->
+                <div class="mt-16 w-full max-w-5xl mx-auto rounded-xl shadow-2xl overflow-hidden border-4 border-indigo-600">
+                    <div class="h-48 sm:h-64 bg-indigo-800 flex items-center justify-center text-indigo-300 text-lg">
+                        <!-- Placeholder Mockup --> 
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. MASALAH YANG DIALAMI BISNIS SAAT INI - Grid Responsif -->
+        <section id="masalah" class="section-padding bg-white">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-3xl font-extrabold text-red-600 mb-4">
+                    Apakah Anda Mengalami Masalah Ini?
+                </h2>
+                <p class="text-xl text-gray-600 mb-12">
+                    Kami tahu betul, ini adalah hambatan utama yang membuat bisnis Anda sulit *scale up*.
+                </p>
+
+                <!-- Grid Disesuaikan: 1 kolom di mobile, 2 kolom di tablet ke atas -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8 text-left">
+                    <!-- Pain Point 1 -->
+                    <div class="p-6 bg-red-50 rounded-xl shadow-md">
+                        <div class="text-3xl font-bold text-red-500 mb-3">01.</div>
+                        <h3 class="text-xl font-bold mb-2">Iklan Boncos & Traffic Kabur</h3>
+                        <p class="text-gray-700">Sudah habis jutaan di Facebook/TikTok Ads, tapi website yang didatangi tidak membuat orang *checkout* atau chat WA. **Konversi Jualannya Rendah.**</p>
+                    </div>
+                    <!-- Pain Point 2 -->
+                    <div class="p-6 bg-red-50 rounded-xl shadow-md">
+                        <div class="text-3xl font-bold text-red-500 mb-3">02.</div>
+                        <h3 class="text-xl font-bold mb-2">Operasional Boros & Data Berantakan</h3>
+                        <p class="text-gray-700">Laporan penjualan, stok, dan administrasi masih pakai Excel. Lelah dengan sistem manual, ingin semua data rapi dan bisa dipantau dari HP.</p>
+                    </div>
+                    <!-- Pain Point 3 -->
+                    <div class="p-6 bg-red-50 rounded-xl shadow-md">
+                        <div class="text-3xl font-bold text-red-500 mb-3">03.</div>
+                        <h3 class="text-xl font-bold mb-2">Website Tidak Profesional</h3>
+                        <p class="text-gray-700">Masih pakai website gratisan atau desain lama. Calon pelanggan jadi ragu dan bisnis Anda sulit mendapatkan kepercayaan (Trust Factor).</p>
+                    </div>
+                    <!-- Pain Point 4 -->
+                    <div class="p-6 bg-red-50 rounded-xl shadow-md">
+                        <div class="text-3xl font-bold text-red-500 mb-3">04.</div>
+                        <h3 class="text-xl font-bold mb-2">Butuh Solusi Custom Mahal</h3>
+                        <p class="text-gray-700">Mencari sistem khusus (misal: IoT Peternakan), tapi semua penyedia menawarkan harga puluhan juta dan proses pengerjaan yang lama sekali.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. SOLUSI DARI KOPIKONFIG.ID - Grid Responsif -->
+        <section id="solusi" class="section-padding bg-indigo-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-indigo-900 text-center mb-16">
+                    Solusi Digital Cepat, Custom, dan Berdampak Nyata
+                </h2>
+                
+                <!-- Grid Disesuaikan: 1 kolom di mobile, 2 kolom di tablet, 3 kolom di desktop -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Solusi 1: Landing Page (Fokus Utama Closing Sprint) -->
+                    <div class="bg-white p-8 rounded-2xl shadow-xl border-t-8 border-indigo-500 hover:shadow-2xl transition duration-300">
+                        <span class="text-5xl mb-4 block text-indigo-600">🎯</span>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-3">Landing Page Jualan Konversi Tinggi</h3>
+                        <p class="text-gray-700">Landing page yang dirancang khusus untuk mengubah *traffic* iklan menjadi *order* WA/checkout. Fokus 100% pada penjualan. **3-5 Hari Jadi!**</p>
+                        <ul class="mt-4 text-sm text-gray-600 list-disc list-inside ml-4">
+                            <li>Cocok untuk Skincare, Kuliner, Fashion, Produk Digital.</li>
+                            <li>Integrasi Pixel & WA API.</li>
+                        </ul>
+                    </div>
+                    <!-- Solusi 2: Sistem Aplikasi Custom -->
+                    <div class="bg-white p-8 rounded-2xl shadow-xl border-t-8 border-indigo-500 hover:shadow-2xl transition duration-300">
+                        <span class="text-5xl mb-4 block text-indigo-600">⚙️</span>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-3">Sistem & Aplikasi Custom Bisnis</h3>
+                        <p class="text-gray-700">Digitalisasi total operasional: POS, Inventory, CRM, dan Dashboard Analitik (BI) yang membuat data Anda rapi dan terpusat.</p>
+                        <ul class="mt-4 text-sm text-gray-600 list-disc list-inside ml-4">
+                            <li>Solusi Custom untuk Toko, Supplier, Desa, Sekolah.</li>
+                            <li>Pantau data dan laporan dari mana saja.</li>
+                        </ul>
+                    </div>
+                    <!-- Solusi 3: IoT & Website Umum -->
+                    <div class="bg-white p-8 rounded-2xl shadow-xl border-t-8 border-indigo-500 hover:shadow-2xl transition duration-300">
+                        <span class="text-5xl mb-4 block text-indigo-600">🌐</span>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-3">Website Profil & Solusi IoT</h3>
+                        <p class="text-gray-700">Website Company Profile profesional. Kami juga menyediakan solusi IoT (misal: Monitoring Peternakan) dengan biaya yang lebih terjangkau.</p>
+                        <ul class="mt-4 text-sm text-gray-600 list-disc list-inside ml-4">
+                            <li>Membangun kepercayaan pelanggan.</li>
+                            <li>Sistem monitoring *real-time* via HP.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. KENAPA HARUS KOPIKONFIG.ID? (Value Proposition) - Grid Responsif -->
+        <section id="usp" class="section-padding bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-3xl font-extrabold text-gray-900 mb-12">
+                    6 Alasan Kenapa Kami Adalah Partner Digital Terbaik Anda
+                </h2>
+
+                <!-- Grid Disesuaikan: 1 kolom di mobile, 2 kolom di tablet, 3 kolom di desktop -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Poin 1: Cepat -->
+                    <div class="p-6 rounded-xl border border-indigo-200">
+                        <span class="text-4xl text-indigo-600 mb-3 block">🚀</span>
+                        <h4 class="font-bold text-xl mb-2">Cepat Selesai (3–7 Hari)</h4>
+                        <p class="text-gray-700 text-sm">Aset digital Anda langsung tayang. Tidak perlu menunggu berbulan-bulan yang membuang waktu & penjualan.</p>
+                    </div>
+                    <!-- Poin 2: Semua Industri -->
+                    <div class="p-6 rounded-xl border border-indigo-200">
+                        <span class="text-4xl text-indigo-600 mb-3 block">💼</span>
+                        <h4 class="font-bold text-xl mb-2">Bisa untuk Semua Industri</h4>
+                        <p class="text-gray-700 text-sm">Dari Skincare, Kuliner, Supplier, Sekolah, hingga Peternakan. Kami memahami kebutuhan unik Anda.</p>
+                    </div>
+                    <!-- Poin 3: Custom -->
+                    <div class="p-6 rounded-xl border border-indigo-200">
+                        <span class="text-4xl text-indigo-600 mb-3 block">🧩</span>
+                        <h4 class="font-bold text-xl mb-2">Bisa Custom Sesuai Kebutuhan</h4>
+                        <p class="text-gray-700 text-sm">Bukan template biasa. Fitur, sistem, dan desain 100% dibuat sesuai alur kerja bisnis Anda.</p>
+                    </div>
+                    <!-- Poin 4: Analitik -->
+                    <div class="p-6 rounded-xl border border-indigo-200">
+                        <span class="text-4xl text-indigo-600 mb-3 block">📊</span>
+                        <h4 class="font-bold text-xl mb-2">Ada Dashboard & Analitik</h4>
+                        <p class="text-gray-700 text-sm">LP kami sudah terpasang Pixel. Aplikasi sistem dilengkapi Dashboard untuk memantau performa real-time.</p>
+                    </div>
+                    <!-- Poin 5: Maintenance -->
+                    <div class="p-6 rounded-xl border border-indigo-200">
+                        <span class="text-4xl text-indigo-600 mb-3 block">🔥</span>
+                        <h4 class="font-bold text-xl mb-2">Maintenance 30 Hari Gratis</h4>
+                        <p class="text-gray-700 text-sm">Tenang, kami tidak lepas tangan. Kami berikan support dan perbaikan minor gratis selama 30 hari.</p>
+                    </div>
+                    <!-- Poin 6: Desain Responsif -->
+                    <div class="p-6 rounded-xl border border-indigo-200">
+                        <span class="text-4xl text-indigo-600 mb-3 block">🎨</span>
+                        <h4 class="font-bold text-xl mb-2">Desain Profesional & Responsif</h4>
+                        <p class="text-gray-700 text-sm">Landing Page terlihat cantik dan 100% optimal di HP, sehingga konversi dari iklan Mobile tidak terganggu.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. DEMO & PORTOFOLIO - Grid Responsif -->
+        <section id="portofolio" class="section-padding bg-indigo-700/90 text-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-3xl font-extrabold mb-4">
+                    Lihat Bukti Kerja Kami (Jaminan Fungsional & Estetik)
+                </h2>
+                <p class="text-lg sm:text-xl text-indigo-100 max-w-3xl mx-auto mb-10">
+                    Kami telah mengubah bisnis kecil menjadi bisnis profesional yang siap bersaing di era digital.
+                </p>
+                
+                <!-- Grid Disesuaikan: 1 kolom di mobile, 2 kolom di tablet, 3 kolom di desktop -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Demo 1 -->
+                    <div class="bg-gray-100 p-6 rounded-xl shadow-lg h-64 flex flex-col justify-end items-center">
+                        <div class="w-full h-full bg-gray-200 rounded-lg flex items-center justify-center text-gray-500">
+                            <!-- Placeholder Demo 1 -->
+                        </div>
+                        <p class="mt-3 text-lg font-semibold text-gray-800">Demo Landing Page Skincare (Konversi Tinggi)</p>
+                    </div>
+                    <!-- Demo 2 -->
+                    <div class="bg-gray-100 p-6 rounded-xl shadow-lg h-64 flex flex-col justify-end items-center">
+                        <div class="w-full h-full bg-gray-200 rounded-lg flex items-center justify-center text-gray-500">
+                            <!-- Placeholder Demo 2 -->
+                        </div>
+                        <p class="mt-3 text-lg font-semibold text-gray-800">Demo Dashboard Analitik Penjualan (Toko)</p>
+                    </div>
+                    <!-- Demo 3 -->
+                    <div class="bg-gray-100 p-6 rounded-xl shadow-lg h-64 flex flex-col justify-end items-center">
+                        <div class="w-full h-full bg-gray-200 rounded-lg flex items-center justify-center text-gray-500">
+                            <!-- Placeholder Demo 3 -->
+                        </div>
+                        <p class="mt-3 text-lg font-semibold text-gray-800">Demo Sistem IoT Peternakan (Custom)</p>
+                    </div>
+                </div>
+
+                <a href="https://wa.me/62882007952010" target="_blank" class="mt-12 inline-block px-8 py-3 bg-yellow-400 text-indigo-900 font-bold rounded-xl hover:bg-yellow-500 transition duration-150 shadow-lg">
+                    Lihat Semua Demo via WhatsApp
+                </a>
+            </div>
+        </section>
+        
+        <!-- 6. PAKET & HARGA JELAS - Grid Responsif -->
+        <section id="paket" class="section-padding bg-gray-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-3xl font-extrabold text-gray-900 mb-12">
+                    Pilih Paket Digitalisasi Terbaik untuk Bisnis Anda
+                </h2>
+
+                <!-- Grid Disesuaikan: 1 kolom di mobile, 2 kolom di tablet, 3 kolom di desktop -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Paket 1: START (Fokus LP) -->
+                    <div class="bg-white p-8 rounded-2xl shadow-xl border-t-4 border-gray-300 flex flex-col">
+                        <h3 class="text-2xl font-bold text-gray-900">Paket Start</h3>
+                        <p class="text-sm text-gray-500 mb-4">Untuk UMKM Pemula & Campaign Iklan Singkat</p>
+                        <div class="my-6">
+                            <span class="text-4xl font-extrabold text-indigo-600">Rp 799.000</span>
+                            <span class="text-gray-500 block text-sm">Bayar Sekali, Langsung Jualan!</span>
+                        </div>
+                        <ul class="text-left space-y-3 text-gray-700 flex-grow mb-8">
+                            <li class="flex items-center"><span class="text-indigo-500 mr-2">✓</span> 1 Landing Page Jualan (Konversi)</li>
+                            <li class="flex items-center"><span class="text-indigo-500 mr-2">✓</span> Copywriting Basic & Layout Standar</li>
+                            <li class="flex items-center"><span class="text-indigo-500 mr-2">✓</span> Integrasi WA API & Google Pixel</li>
+                            <li class="flex items-center"><span class="text-indigo-500 mr-2">✓</span> Gratis Hosting 1 Bulan Pertama</li>
+                            <li class="flex items-center"><span class="text-indigo-500 mr-2">✓</span> Support 30 Hari</li>
+                        </ul>
+                        <a href="https://wa.me/62882007952010?text=Saya%20mau%20Paket%20Start%20LP%20Rp%20799.000" target="_blank" class="mt-auto px-8 py-3 bg-indigo-600 text-white font-bold rounded-xl hover:bg-indigo-700 transition duration-150 shadow-md">
+                            Pesan Paket Start
+                        </a>
+                    </div>
+
+                    <!-- Paket 2: GROWTH (Best Value) -->
+                    <div class="bg-indigo-600 p-8 rounded-2xl shadow-2xl scale-100 lg:scale-[1.03] flex flex-col text-white">
+                        <span class="absolute top-0 right-0 -mt-3 mr-3 bg-yellow-400 text-indigo-900 text-xs font-bold px-3 py-1 rounded-full uppercase">Paling Populer</span>
+                        <h3 class="text-2xl font-bold">Paket Growth</h3>
+                        <p class="text-sm text-indigo-200 mb-4">Untuk Bisnis Berkembang yang Butuh Catalog Produk</p>
+                        <div class="my-6">
+                            <span class="text-4xl font-extrabold text-yellow-400">Rp 1.500.000</span>
+                            <span class="text-indigo-200 block text-sm">Website + Catalog + WA Integrasi</span>
+                        </div>
+                        <ul class="text-left space-y-3 text-indigo-100 flex-grow mb-8">
+                            <li class="flex items-center"><span class="text-yellow-400 mr-2">✓</span> Website 3–5 Halaman (Landing Page + Profil)</li>
+                            <li class="flex items-center"><span class="text-yellow-400 mr-2">✓</span> Catalog Produk Digital/Fisik</li>
+                            <li class="flex items-center"><span class="text-yellow-400 mr-2">✓</span> Semua Fitur Paket Start</li>
+                            <li class="flex items-center"><span class="text-yellow-400 mr-2">✓</span> Form Kontak & Database Pelanggan Dasar</li>
+                            <li class="flex items-center"><span class="text-yellow-400 mr-2">✓</span> Prioritas Support 30 Hari</li>
+                        </ul>
+                        <a href="https://wa.me/62882007952010?text=Saya%20mau%20Paket%20Growth%20Rp%201.500.000" target="_blank" class="mt-auto px-8 py-3 bg-yellow-400 text-indigo-900 font-bold rounded-xl hover:bg-yellow-500 transition duration-150 shadow-lg">
+                            Pesan Paket Growth
+                        </a>
+                    </div>
+                    
+                    <!-- Paket 3: PRO -->
+                    <div class="bg-white p-8 rounded-2xl shadow-xl border-t-4 border-gray-300 flex flex-col">
+                        <h3 class="text-2xl font-bold text-gray-900">Paket Pro</h3>
+                        <p class="text-sm text-gray-500 mb-4">Untuk Lembaga, IoT, dan Solusi Sistem Custom</p>
+                        <div class="my-6">
+                            <span class="text-4xl font-extrabold text-gray-800">Mulai Rp 3.000.000+</span>
+                            <span class="text-gray-500 block text-sm">Harga menyesuaikan fitur yang dibutuhkan</span>
+                        </div>
+                        <ul class="text-left space-y-3 text-gray-700 flex-grow mb-8">
+                            <li class="flex items-center"><span class="text-indigo-500 mr-2">✓</span> Custom Fitur (Contoh: POS, Inventory, IoT)</li>
+                            <li class="flex items-center"><span class="text-indigo-500 mr-2">✓</span> Sistem Backend / Dashboard Admin</li>
+                            <li class="flex items-center"><span class="text-indigo-500 mr-2">✓</span> Database Terintegrasi</li>
+                            <li class="flex items-center"><span class="text-indigo-500 mr-2">✓</span> Domain + Hosting 1 Tahun</li>
+                            <li class="flex items-center"><span class="text-indigo-500 mr-2">✓</span> Maintenance 60 Hari</li>
+                        </ul>
+                        <a href="https://wa.me/62882007952010?text=Saya%20mau%20Konsultasi%20Paket%20Pro%20Custom" target="_blank" class="mt-auto px-8 py-3 bg-gray-700 text-white font-bold rounded-xl hover:bg-gray-800 transition duration-150 shadow-md">
+                            Konsultasi Paket Pro
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. TESTIMONI / BUKTI SOSIAL - Grid Responsif -->
+        <section id="testimoni" class="section-padding bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-3xl font-extrabold text-gray-900 mb-12">
+                    Mereka Sudah Merasakan Peningkatan Nyata
+                </h2>
+                
+                <!-- Grid Disesuaikan: 1 kolom di mobile, 2 kolom di tablet, 3 kolom di desktop -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Testimoni 1 (LP Konversi) -->
+                    <div class="bg-indigo-50 p-6 rounded-xl shadow-lg border-l-4 border-indigo-500">
+                        <div class="text-yellow-500 mb-3 text-2xl">⭐⭐⭐⭐⭐</div>
+                        <p class="italic text-gray-700 mb-4">"Luar biasa! Setelah ganti Landing Page Kopikonfig.id, biaya iklan kami lebih efisien dan **konversi naik 40%**. Desainnya clean dan *copywriting* jualannya benar-benar teruji."</p>
+                        <p class="font-bold text-gray-800">- Rina S., Owner Skincare Lokal</p>
+                    </div>
+                    <!-- Testimoni 2 (Sistem Operasional) -->
+                    <div class="bg-indigo-50 p-6 rounded-xl shadow-lg border-l-4 border-indigo-500">
+                        <div class="text-yellow-500 mb-3 text-2xl">⭐⭐⭐⭐⭐</div>
+                        <p class="italic text-gray-700 mb-4">"Sistem POS-nya cepat dan rapi. Semua data stok dan transaksi sudah terpusat. **Hemat waktu 5 jam** per hari di operasional, bisa fokus ke strategi bisnis."</p>
+                        <p class="font-bold text-gray-800">- Bpk. Hadi, Supplier Pakan Ternak</p>
+                    </div>
+                    <!-- Testimoni 3 (Kecepatan & Komunikasi) -->
+                    <div class="bg-indigo-50 p-6 rounded-xl shadow-lg border-l-4 border-indigo-500">
+                        <div class="text-yellow-500 mb-3 text-2xl">⭐⭐⭐⭐⭐</div>
+                        <p class="italic text-gray-700 mb-4">"Pelayanannya cepat, rapi, dan komunikatif. Website Company Profile saya selesai dalam 4 hari, langsung terlihat profesional. Highly recommended!"</p>
+                        <p class="font-bold text-gray-800">- Agung K., Direktur Lembaga Pelatihan</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 8. FAQ (Jawaban Keraguan) -->
+        <section id="faq" class="section-padding bg-gray-100">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl font-extrabold text-gray-900 text-center mb-12">
+                    Jawab Keraguan Anda (Kami Jamin Prosesnya Mudah)
+                </h2>
+                <div class="space-y-4">
+                    <!-- FAQ 1: Kecepatan -->
+                    <div class="p-5 bg-white rounded-xl shadow-md">
+                        <details class="group">
+                            <summary class="flex justify-between items-center font-semibold text-lg text-gray-800 cursor-pointer">
+                                Berapa lama proses pengerjaan Landing Page/Website?
+                                <span class="transition group-open:rotate-180 text-indigo-600">+</span>
+                            </summary>
+                            <p class="mt-3 text-gray-600 pl-4 border-l-2 border-indigo-400">
+                                **3-7 hari kerja**, tergantung kompleksitas paket. Landing Page Konversi (Paket Start) bisa kami selesaikan dalam 3-5 hari agar Anda bisa langsung menjalankan iklan dan closing cepat.
+                            </p>
+                        </details>
+                    </div>
+                    <!-- FAQ 2: Revisi & Custom -->
+                    <div class="p-5 bg-white rounded-xl shadow-md">
+                        <details class="group">
+                            <summary class="flex justify-between items-center font-semibold text-lg text-gray-800 cursor-pointer">
+                                Apakah bisa revisi dan custom fitur sesuai kebutuhan bisnis saya?
+                                <span class="transition group-open:rotate-180 text-indigo-600">+</span>
+                            </summary>
+                            <p class="mt-3 text-gray-600 pl-4 border-l-2 border-indigo-400">
+                                Ya. Semua paket mencakup revisi minor. Untuk kebutuhan custom fitur yang lebih dalam (seperti IoT atau Dashboard BI), kami sediakan **Paket Pro** yang 100% dibuat sesuai alur kerja Anda.
+                            </p>
+                        </details>
+                    </div>
+                    <!-- FAQ 3: Hosting & Domain -->
+                    <div class="p-5 bg-white rounded-xl shadow-md">
+                        <details class="group">
+                            <summary class="flex justify-between items-center font-semibold text-lg text-gray-800 cursor-pointer">
+                                Apakah Hosting & Domain sudah termasuk dalam paket harga?
+                                <span class="transition group-open:rotate-180 text-indigo-600">+</span>
+                            </summary>
+                            <p class="mt-3 text-gray-600 pl-4 border-l-2 border-indigo-400">
+                                Untuk Paket Start, kami berikan **Gratis Hosting 1 bulan**. Untuk paket lainnya, kami berikan opsi bundling terjangkau atau Anda bisa menggunakan penyedia hosting/domain pilihan Anda. Kami akan bantu setting!
+                            </p>
+                        </details>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 9. FINAL CTA (Penutup Halaman) -->
+        <section id="cta-akhir" class="section-padding bg-indigo-700">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white mb-4">
+                    Amankan Closing Penjualan Anda Hari Ini!
+                </h2>
+                <p class="text-lg sm:text-xl text-indigo-200 mb-10">
+                    Jangan biarkan kompetitor mencuri *traffic* berharga Anda. Mari bangun aset digital yang fokus pada **PROFIT**.
+                </p>
+                <!-- Tombol CTA Akhir - Responsif Text Sizing -->
+                <a href="https://wa.me/62882007952010?text=Saya%20siap%20closing%20dan%20mau%20konsultasi%20gratis" target="_blank" class="cta-prime inline-block px-8 sm:px-12 py-3 sm:py-4 bg-yellow-400 text-indigo-900 font-extrabold text-xl sm:text-2xl rounded-xl shadow-2xl hover:bg-yellow-500 focus:outline-none focus:ring-4 focus:ring-yellow-300">
+                    Chat Admin Sekarang (Respon Cepat!)
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FLOATING WHATSAPP BUTTON (Z-Index Tinggi) -->
+    <a href="https://wa.me/62882007952010?text=Halo%20saya%20tertarik%20dengan%20Landing%20Page%20Konversi%20&%20mau%20konsultasi" target="_blank" class="floating-whatsapp w-14 h-14 sm:w-16 sm:h-16 bg-green-500 rounded-full flex items-center justify-center shadow-2xl">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 sm:w-8 sm:h-8 text-white" viewBox="0 0 24 24" fill="currentColor"><path d="M12.036 21.011c-1.396.002-2.73-.362-3.893-1.045l-3.953 1.052 1.077-3.899c-.702-1.168-1.066-2.502-1.067-3.898C4.202 7.083 7.885 3.4 12.42 3.4c4.536 0 8.219 3.682 8.219 8.217 0 4.535-3.683 8.217-8.218 8.214zm4.276-4.505c-.21-.106-1.24-.606-1.432-.676-.192-.07-.333-.105-.473.105-.14.21-.542.676-.662.816-.12.14-.24.158-.45.053-.21-.105-.885-.325-1.685-1.042-.625-.56-1.048-1.25-1.17-1.46-.12-.21-.01-.197.095-.303.095-.095.21-.247.315-.367.105-.12.14-.19.21-.31s.035-.21-.017-.315c-.052-.105-.473-1.14-.64-1.542-.167-.402-.334-.345-.474-.355-.14-.01-.303-.01-.473-.01-.17 0-.45.052-.68.262-.23.21-.875.856-.875 2.08s.905 2.41 1.035 2.58c.13.17 1.77 2.705 4.315 3.82.72.31 1.285.5 1.725.64s.785.17 1.06.14.925-.375 1.055-.742.13-.675.095-.742c-.035-.07-.14-.105-.29-.18zM12.42 19.4c3.55 0 6.42-2.87 6.42-6.42 0-3.55-2.87-6.42-6.42-6.42-3.55 0-6.42 2.87-6.42 6.42 0 1.115.3 2.162.83 3.085l-.545 1.96 1.99-.51c.88.48 1.867.75 2.895.75z"/></svg>
+    </a>
+
+    <!-- FOOTER Sederhana -->
+    <footer class="bg-gray-800 py-6">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm text-gray-400">
+            &copy; 2025 Kopikonfig.id. Partner Digital UMKM Indonesia.
+        </div>
+    </footer>
+</body>
+</html>
