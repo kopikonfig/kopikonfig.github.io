@@ -24,18 +24,17 @@
         .bg-accent-soft { background-color: #a1887f; } /* Warna Tombol/CTA */
         .hover\:bg-accent-darker:hover { background-color: #8d6e63; } /* Hover Tombol */
         
-        /* Refined Card Effect: Lebih Bersih dan Lembut */
+        /* Refined Card Effect: Sangat Bersih dan Lembut */
         .service-card {
-            transition: all 0.4s ease-out;
-            transform: translateY(0);
+            transition: all 0.3s ease-out;
             border: 1px solid #f0e9e1; /* Border awal yang sangat tipis */
         }
-        /* Efek hover: Tidak ada garis keras, hanya shadow lift yang lembut dan background shift */
+        /* Efek hover minimal: Hanya sedikit angkatan dan perubahan background/border */
         .service-card:hover {
-            transform: translateY(-3px); /* Angkatan lembut */
-            box-shadow: 0 8px 15px -5px rgba(121, 85, 72, 0.1); /* Bayangan soft dan transparan */
-            background-color: #ffffff; /* Memastikan background putih murni saat dihover untuk kontras bersih */
-            border: 1px solid #e7dcd3; /* Border yang sedikit terlihat untuk fokus */
+            transform: translateY(-2px); 
+            box-shadow: 0 4px 10px -3px rgba(121, 85, 72, 0.08); /* Bayangan yang sangat tipis */
+            background-color: #ffffff; 
+            border: 1px solid #e7dcd3; 
         }
 
         /* Styling Ikon di Kartu */
@@ -47,9 +46,10 @@
 </head>
 <body class="min-h-screen">
 
-    <!-- Header / Hero Section: Diubah menjadi bagian "About" -->
+    <!-- Header / Hero Section: Halaman Tentang Kami -->
     <header class="bg-white py-16 shadow-sm border-b border-gray-100">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            
             <!-- Navigasi Sederhana untuk konteks "About" -->
             <p class="text-sm font-medium uppercase tracking-wider text-gray-400 mb-2">
                 kopikonfig.github.io / Tentang Kami
@@ -59,12 +59,13 @@
                 Kami Adalah Teknisi Web Anda
             </h1>
             
-            <p class="text-lg text-gray-600 max-w-3xl mx-auto mb-6">
-                Kopikonfig adalah entitas independen yang berfokus murni pada keahlian pengembangan aplikasi web dan integrasi sistem.
+            <p class="text-lg text-gray-600 max-w-3xl mx-auto mb-4">
+                Kopikonfig adalah entitas independen yang berfokus murni pada keahlian pengembangan aplikasi web dan integrasi sistem yang efisien.
             </p>
             
-            <p class="text-lg text-gray-500 max-w-3xl mx-auto">
-                <span class="font-semibold color-accent-soft">Catatan Penting:</span> Kami tidak menyediakan layanan *branding* atau profil digital. Untuk layanan agensi penuh, silakan hubungi PT Koneksi Jaringan Indonesia.
+            <!-- Catatan Penting Dibuat Lebih Subtil -->
+            <p class="text-base text-gray-500 max-w-3xl mx-auto italic">
+                Kami tidak menyediakan layanan *branding* atau profil digital. Silakan hubungi PT Koneksi Jaringan Indonesia untuk layanan agensi penuh.
             </p>
         </div>
     </header>
@@ -79,16 +80,16 @@
                     Tiga Pilar Kemampuan Teknis Kopikonfig
                 </h2>
                 <p class="text-gray-500 max-w-xl mx-auto">
-                    Keahlian kami terpusat pada pembangunan solusi digital yang stabil, efisien, dan siap beradaptasi dengan kebutuhan bisnis Anda.
+                    Keahlian kami terpusat pada pembangunan solusi digital yang stabil, efisien, dan siap beradaptasi.
                 </p>
                 <div class="h-1 w-20 bg-accent-soft mx-auto rounded-full opacity-50 mt-4"></div>
             </div>
 
-            <!-- Grid Layanan/Kemampuan -->
+            <!-- Grid Layanan/Kemampuan - Non-Interaktif -->
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
 
                 <!-- Kartu 1: Pengembangan Aplikasi Web Kustom -->
-                <div class="service-card bg-white p-8 rounded-2xl shadow-lg cursor-pointer" onclick="openModal('Pengembangan Aplikasi Web Kustom', 'Membangun aplikasi web unik (SaaS, internal tools, dashboard) dari nol, menggunakan teknologi modern (Node.js, React/Angular/Vue). Fokus pada performa, keamanan, dan skalabilitas. Kami meracik setiap baris kode agar sesuai dengan alur kerja bisnis spesifik Anda.', 'code', 'Diskusikan Proyek Kustom Anda')">
+                <div class="service-card bg-white p-8 rounded-2xl shadow-lg">
                     
                     <div class="icon-container flex items-center justify-center h-14 w-14 rounded-xl bg-cream-soft mb-5">
                         <i data-lucide="code" class="w-7 h-7"></i>
@@ -97,101 +98,58 @@
                     <h3 class="text-xl font-bold color-text-utama mb-2">1. Custom Web App Development</h3>
                     <p class="text-gray-500 text-sm">Merancang dan membangun solusi web yang 100% didasarkan pada kebutuhan fungsional spesifik Anda.</p>
                     
-                    <span class="mt-4 inline-flex items-center text-sm font-semibold color-accent-soft hover:underline">
-                        Lihat Teknologi &rarr;
+                    <span class="mt-4 inline-flex items-center text-sm font-medium text-gray-400">
+                        Fokus: Skalabilitas Tinggi
                     </span>
                 </div>
 
                 <!-- Kartu 2: Konfigurasi Platform Web (CMS/E-commerce) -->
-                <div class="service-card bg-white p-8 rounded-2xl shadow-lg cursor-pointer" onclick="openModal('Konfigurasi Platform Web', 'Setup, kustomisasi mendalam, dan *tuning* performa platform siap pakai seperti WordPress (WooCommerce), Shopify, atau Odoo. Memastikan konfigurasi sistem yang aman, fungsional, dan optimal untuk kecepatan transaksi dan SEO.', 'settings', 'Pesan Setup Platform')">
+                <div class="service-card bg-white p-8 rounded-2xl shadow-lg">
                     
                     <div class="icon-container flex items-center justify-center h-14 w-14 rounded-xl bg-cream-soft mb-5">
                         <i data-lucide="settings" class="w-7 h-7"></i>
                     </div>
                     
                     <h3 class="text-xl font-bold color-text-utama mb-2">2. Platform Setup & Konfigurasi</h3>
-                    <p class="text-gray-500 text-sm">Konfigurasi dan kustomisasi CMS dan platform E-commerce yang sudah ada agar beroperasi pada efisiensi maksimal.</p>
+                    <p class="text-gray-500 text-sm">Konfigurasi dan kustomisasi CMS (WP/Shopify) agar beroperasi pada efisiensi dan keamanan maksimal.</p>
                     
-                    <span class="mt-4 inline-flex items-center text-sm font-semibold color-accent-soft hover:underline">
-                        Lihat Proses Kerja &rarr;
+                    <span class="mt-4 inline-flex items-center text-sm font-medium text-gray-400">
+                        Fokus: Tuning Performa
                     </span>
                 </div>
 
                 <!-- Kartu 3: Integrasi API & Sistem Pihak Ketiga -->
-                <div class="service-card bg-white p-8 rounded-2xl shadow-lg cursor-pointer" onclick="openModal('Integrasi API & Sistem', 'Menghubungkan aplikasi web Anda dengan berbagai sistem eksternal (Payment Gateways, Logistik, Inventaris, CRM, ERP) melalui API. Kami menjamin transfer data yang mulus, aman, dan otomatis untuk menghilangkan intervensi manual.', 'link', 'Mulai Integrasi Sistem')">
+                <div class="service-card bg-white p-8 rounded-2xl shadow-lg">
                     
                     <div class="icon-container flex items-center justify-center h-14 w-14 rounded-xl bg-cream-soft mb-5">
                         <i data-lucide="link" class="w-7 h-7"></i>
                     </div>
                     
                     <h3 class="text-xl font-bold color-text-utama mb-2">3. API & Integrasi Sistem</h3>
-                    <p class="text-gray-500 text-sm">Layanan koneksi antar-sistem untuk otomatisasi dan sinkronisasi seluruh alur kerja digital Anda.</p>
+                    <p class="text-gray-500 text-sm">Layanan koneksi antar-sistem untuk otomatisasi data (Payment, CRM, ERP, Logistik).</p>
                     
-                    <span class="mt-4 inline-flex items-center text-sm font-semibold color-accent-soft hover:underline">
-                        Hubungi Tim Integrasi &rarr;
+                    <span class="mt-4 inline-flex items-center text-sm font-medium text-gray-400">
+                        Fokus: Otomatisasi Alur Kerja
                     </span>
                 </div>
 
             </div>
             
-            <!-- CTA Sekunder: Kontak Teknis -->
+            <!-- CTA Sekunder: Kontak Teknis dengan Nomor Telepon -->
             <div class="mt-20 bg-cream-soft p-10 rounded-2xl text-center border-t-2 border-accent-soft/30 shadow-inner">
                 <p class="text-xl font-semibold color-text-utama">
                     Ingin berbicara dengan teknisi kami secara langsung?
                 </p>
                 <p class="text-gray-500 mt-2 mb-6">
-                    Kami siap mendiskusikan infrastruktur digital dan tantangan teknis spesifik yang Anda hadapi.
+                    Hubungi kami untuk mendiskusikan infrastruktur digital dan tantangan teknis spesifik yang Anda hadapi.
                 </p>
-                <button class="py-3 px-8 rounded-full bg-accent-soft text-white font-bold text-base hover:bg-accent-darker transition duration-300 shadow-md hover:shadow-lg" onclick="openModal('Konsultasi Kebutuhan Teknis', 'Mari kita analisis infrastruktur digital dan tantangan Anda saat ini. Kami akan memberikan rekomendasi yang spesifik, efisien, dan berorientasi pada hasil.', 'coffee', 'Jadwalkan Konsultasi Teknis')">
-                    Jadwalkan Konsultasi Teknis Gratis
-                </button>
-            </div>
-        </div>
-    </main>
-
-    <!-- Modal (Pop-up) untuk Detail Layanan: Soft and Clean -->
-    <div id="service-modal" class="modal fixed inset-0 hidden items-center justify-center p-4 bg-black bg-opacity-10 backdrop-blur-sm" onclick="closeModal(event)">
-        <div class="bg-white rounded-2xl shadow-2xl max-w-sm w-full p-8 relative transform transition-all duration-300" onclick="event.stopPropagation()">
-            <!-- Tombol Tutup -->
-            <button class="absolute top-4 right-4 text-gray-400 hover:text-gray-600 p-2" onclick="closeModal()">
-                <i data-lucide="x" class="w-5 h-5"></i>
-            </button>
-            
-            <!-- Isi Modal -->
-            <div class="text-center mb-6">
-                <!-- Ikon Dinamis -->
-                <div id="modal-icon-container" class="icon-container mx-auto flex items-center justify-center h-16 w-16 rounded-xl bg-cream-soft mb-4">
-                    <!-- Ikon akan diinject di sini -->
-                </div>
-                <h2 id="modal-title" class="text-2xl font-bold color-text-utama mb-2">Judul Layanan</h2>
-                <p id="modal-description" class="text-gray-600 text-sm leading-relaxed">Deskripsi rinci layanan ada di sini.</p>
-            </div>
-
-            <div class="mt-6 border-t border-gray-100 pt-6">
-                <ul class="space-y-3 text-gray-700 text-sm">
-                    <li class="flex items-start text-gray-500">
-                        <i data-lucide="zap" class="w-4 h-4 mt-1 mr-3 color-accent-soft flex-shrink-0"></i>
-                        <span class="text-gray-600">Fokus: **Kecepatan dan Efisiensi Teknis** dalam setiap implementasi.</span>
-                    </li>
-                    <li class="flex items-start text-gray-500">
-                        <i data-lucide="star" class="w-4 h-4 mt-1 mr-3 color-accent-soft flex-shrink-0"></i>
-                        <span class="text-gray-600">Metodologi: Menerapkan praktik **Agile** dan dokumentasi kode yang lengkap.</span>
-                    </li>
-                    <li class="flex items-start text-gray-500">
-                        <i data-lucide="tool" class="w-4 h-4 mt-1 mr-3 color-accent-soft flex-shrink-0"></i>
-                        <span class="text-gray-600">Termasuk: **Dukungan Pasca-Implementasi** selama 30 hari untuk memastikan stabilitas.</span>
-                    </li>
-                </ul>
-            </div>
-
-            <!-- CTA Utama di Modal -->
-            <div class="mt-8">
-                <a href="#" id="modal-cta" class="w-full block text-center py-3 rounded-xl bg-accent-soft text-white font-bold text-base hover:bg-accent-darker transition duration-300">
-                    Mulai Konsultasi
+                <a href="tel:089649246450" class="inline-flex items-center justify-center py-3 px-8 rounded-full bg-accent-soft text-white font-bold text-base hover:bg-accent-darker transition duration-300 shadow-md hover:shadow-lg">
+                    <i data-lucide="phone" class="w-5 h-5 mr-2"></i>
+                    Hubungi Teknisi: 089649246450
                 </a>
             </div>
         </div>
-    </div>
+    </main>
 
     <!-- JavaScript untuk Fungsionalitas Interaktif -->
     <script>
@@ -199,46 +157,6 @@
         document.addEventListener('DOMContentLoaded', (event) => {
             lucide.createIcons();
         });
-
-        // Mengambil elemen modal
-        const modal = document.getElementById('service-modal');
-        const modalTitle = document.getElementById('modal-title');
-        const modalDescription = document.getElementById('modal-description');
-        const modalIconContainer = document.getElementById('modal-icon-container');
-        const modalCta = document.getElementById('modal-cta');
-
-        /**
-         * Fungsi untuk membuka modal dengan detail layanan
-         */
-        function openModal(title, description, iconName, ctaText) {
-            // Mengisi konten modal
-            modalTitle.textContent = title;
-            modalDescription.textContent = description;
-            modalCta.textContent = ctaText;
-            
-            // Mengganti ikon
-            modalIconContainer.innerHTML = `<i data-lucide="${iconName}" class="w-8 h-8"></i>`;
-            lucide.createIcons(); // Memuat ulang ikon setelah konten diubah
-            
-            // Menampilkan modal
-            modal.classList.remove('hidden');
-            modal.classList.add('flex');
-            
-            // Mengunci scroll body saat modal terbuka
-            document.body.style.overflow = 'hidden';
-        }
-
-        /**
-         * Fungsi untuk menutup modal
-         */
-        function closeModal(event) {
-            // Pastikan hanya menutup jika diklik di luar modal atau tombol tutup
-            if (!event || event.target === modal || event.target.closest('button') === modal.querySelector('button')) {
-                modal.classList.remove('flex');
-                modal.classList.add('hidden');
-                document.body.style.overflow = ''; // Mengaktifkan kembali scroll body
-            }
-        }
     </script>
 
 </body>
