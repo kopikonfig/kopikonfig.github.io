@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerbang Pilihan Layanan Digital Kopikonfig</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { 
+            font-family: 'Inter', sans-serif; 
+            background-color: #f8fafc; 
+        }
+        .card-service { 
+            transition: all 0.3s ease; 
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+            border: 1px solid #e2e8f0;
+        }
+        .card-service:hover { 
+            transform: translateY(-8px); 
+            box-shadow: 0 10px 30px -5px rgba(59, 130, 246, 0.3); /* Shadow biru saat hover */
+            border-color: #3b82f6;
+        }
+        .icon-box {
+            background-color: #eff6ff;
+        }
+        .back-btn:hover {
+            color: #1e40af;
+            background-color: #e0f2fe;
+        }
+    </style>
+</head>
+<body class="p-4 sm:p-8 min-h-screen">
+
+    <main class="max-w-6xl mx-auto">
+        
+        <!-- Tampilan Utama: Pemilihan Kategori -->
+        <section id="selection-view" class="py-10 text-center">
+            <h1 class="text-4xl sm:text-5xl font-extrabold text-gray-900 mb-4">
+                Pilih Jenis Solusi Digital Anda
+            </h1>
+            <p class="text-lg text-gray-600 mb-12 max-w-4xl mx-auto">
+                Layanan kami disesuaikan dengan skala dan kompleksitas proyek. Pilih salah satu kategori di bawah yang paling menggambarkan kebutuhan bisnis Anda.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
+                
+                <!-- Opsi 1: Website Profil & Branding -->
+                <div class="card-service bg-white p-6 sm:p-8 rounded-xl cursor-pointer group" onclick="showServiceDetails('website')">
+                    <div class="icon-box w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-3xl text-blue-600 transition duration-300 group-hover:bg-blue-600 group-hover:text-white">
+                        🌐
+                    </div>
+                    <h2 class="text-xl sm:text-2xl font-bold mb-2 text-gray-800">Situs Web Profil Cepat</h2>
+                    <p class="text-gray-500 text-sm sm:text-base">Untuk visibilitas online, branding, dan informasi statis perusahaan.</p>
+                </div>
+
+                <!-- Opsi 2: Aplikasi Web Kustom & Platform -->
+                <div class="card-service bg-white p-6 sm:p-8 rounded-xl cursor-pointer group" onclick="showServiceDetails('web_app')">
+                    <div class="icon-box w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-3xl text-indigo-600 transition duration-300 group-hover:bg-indigo-600 group-hover:text-white">
+                        ⚙️
+                    </div>
+                    <h2 class="text-xl sm:text-2xl font-bold mb-2 text-gray-800">Aplikasi Web Kustom</h2>
+                    <p class="text-gray-500 text-sm sm:text-base">Untuk manajemen data kompleks, sistem internal, atau platform E-Commerce.</p>
+                </div>
+
+                <!-- Opsi 3: Aplikasi Mobile -->
+                <div class="card-service bg-white p-6 sm:p-8 rounded-xl cursor-pointer group" onclick="showServiceDetails('mobile')">
+                    <div class="icon-box w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-3xl text-green-600 transition duration-300 group-hover:bg-green-600 group-hover:text-white">
+                        📱
+                    </div>
+                    <h2 class="text-xl sm:text-2xl font-bold mb-2 text-gray-800">Aplikasi Mobile</h2>
+                    <p class="text-gray-500 text-sm sm:text-base">Untuk pengalaman *mobile-first*, notifikasi *push*, dan akses fitur perangkat.</p>
+                </div>
+
+            </div>
+        </section>
+        
+        <!-- Tampilan Detail Layanan (Tersembunyi Awalnya) -->
+        <section id="details-view" class="hidden py-8">
+            <!-- Tombol kembali -->
+            <button onclick="showSelection()" class="back-btn flex items-center text-gray-700 font-medium mb-8 p-3 rounded-full transition duration-150 border border-transparent">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd" />
+                </svg>
+                Kembali ke Pilihan Kategori
+            </button>
+
+            <!-- Kontainer Detail Layanan -->
+            <div id="details-container" class="bg-white card-service p-6 sm:p-10 shadow-xl">
+                <!-- Konten spesifik akan di-inject di sini oleh JavaScript -->
+            </div>
+            
+            <!-- Tombol CTA Global (DIPERBAIKI) -->
+            <div class="text-center mt-12">
+                <h3 class="text-xl font-semibold text-gray-700 mb-4">Siap Memulai Proyek Anda?</h3>
+                <a href="#" class="inline-block bg-blue-600 text-white font-bold py-3 px-10 rounded-full text-lg shadow-lg hover:bg-blue-700 transition duration-200 transform hover:scale-105">
+                    Mulai Konsultasi Gratis Sekarang
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        const selectionScreen = document.getElementById('selection-view');
+        const detailsScreen = document.getElementById('details-view');
+        const detailsContainer = document.getElementById('details-container');
+
+        // Data Dinamis untuk Setiap Kategori Layanan
+        const serviceData = {
+            website: {
+                title: "Situs Web Profil Cepat (Branding & Visibilitas)",
+                icon: "🌐",
+                color: "text-blue-600",
+                desc: "Solusi untuk bisnis atau institusi yang baru memulai kehadiran online. Fokus pada desain yang menarik, informatif, dan optimasi SEO dasar. Ideal untuk Company Profile, Landing Page, atau Portfolio.",
+                features: [
+                    "Desain Responsif (Mobile-Friendly) Premium",
+                    "Optimasi Kecepatan (Lighthouse Score Tinggi)",
+                    "Integrasi Google Analytics & Pixel",
+                    "Hingga 10 Halaman Statis (Tentang Kami, Layanan, Kontak, dll.)",
+                    "Sistem Manajemen Konten (CMS) Sederhana (opsional)"
+                ],
+                idealFor: [
+                    "Bisnis yang ingin membangun *trust* dan kredibilitas.",
+                    "Perusahaan yang hanya perlu menampilkan informasi statis.",
+                    "Proyek dengan anggaran dan waktu terbatas untuk *launching* cepat."
+                ]
+            },
+            web_app: {
+                title: "Aplikasi Web Kustom (Platform & Otomasi Bisnis)",
+                icon: "⚙️",
+                color: "text-indigo-600",
+                desc: "Pengembangan sistem yang kompleks, berorientasi pada fungsi dan data. Mencakup fitur interaktif, database, dan logika bisnis yang rumit. Ideal untuk E-Commerce, SaaS (Software as a Service), atau ERP internal.",
+                features: [
+                    "Arsitektur Backend Kustom & Database Skalabel",
+                    "Fitur Login, Role & Permission (Akses Terkelola)",
+                    "Integrasi API Pihak Ketiga (Pembayaran, Logistik, dll.)",
+                    "Dashboard Admin & Analitik Interaktif",
+                    "Keamanan Data Level Produksi (SSL, Sanitasi Data)"
+                ],
+                idealFor: [
+                    "Bisnis dengan kebutuhan manajemen data yang kompleks.",
+                    "Startup yang ingin meluncurkan platform berbasis langganan (SaaS).",
+                    "Perusahaan yang ingin mengotomasi proses bisnis internal (ERP/CRM)."
+                ]
+            },
+            mobile: {
+                title: "Aplikasi Mobile (iOS & Android Native/Hybrid)",
+                icon: "📱",
+                color: "text-green-600",
+                desc: "Membangun aplikasi untuk smartphone, memanfaatkan fitur perangkat keras (kamera, GPS, notifikasi). Memberikan pengalaman pengguna yang optimal dan personal. Cocok untuk aplikasi konsumen dengan tingkat interaksi tinggi.",
+                features: [
+                    "Pengembangan Native (Kotlin/Swift) atau Hybrid (React Native/Flutter)",
+                    "Akses ke Hardware Perangkat (Kamera, Lokasi, Akselerometer)",
+                    "Implementasi Notifikasi Push Real-time",
+                    "Publikasi & Dukungan di Google Play Store dan Apple App Store",
+                    "Desain UX/UI Berbasis Prinsip Mobile-First"
+                ],
+                idealFor: [
+                    "Bisnis yang ingin menjangkau pengguna di mana saja.",
+                    "Aplikasi yang memerlukan fitur offline atau akses ke sensor HP.",
+                    "Layanan yang mengandalkan loyalitas pengguna (melalui notifikasi)."
+                ]
+            }
+        };
+
+        /**
+         * Menampilkan layar detail layanan berdasarkan kunci.
+         * @param {string} serviceKey - Kunci layanan (e.g., 'website', 'web_app', 'mobile').
+         */
+        function showServiceDetails(serviceKey) {
+            const data = serviceData[serviceKey];
+            
+            // Generate list of features
+            const featuresHtml = data.features.map(f => `
+                <li class="flex items-start mb-3">
+                    <span class="text-xl ${data.color} mr-3 mt-1">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                    </span>
+                    <span class="text-gray-700">${f}</span>
+                </li>
+            `).join('');
+            
+            // Generate list of ideal uses
+            const idealForHtml = data.idealFor.map(i => `
+                <li class="flex items-start mb-3">
+                    <span class="text-xl text-yellow-500 mr-3 mt-1">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                    </span>
+                    <span class="text-gray-700">${i}</span>
+                </li>
+            `).join('');
+
+            // Setel kelas border dinamis pada kontainer detail
+            detailsContainer.className = `bg-white card-service p-6 sm:p-10 shadow-xl border-t-4 ${data.color.replace('text-', 'border-')}`;
+            
+            // Isi konten detail
+            detailsContainer.innerHTML = `
+                <div class="flex flex-col sm:flex-row items-start sm:items-center mb-6 border-b pb-4">
+                    <div class="text-5xl sm:text-4xl mr-0 sm:mr-4 mb-3 sm:mb-0 ${data.color} p-3 rounded-xl bg-gray-50">${data.icon}</div>
+                    <div>
+                        <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900 mt-1">${data.title}</h2>
+                    </div>
+                </div>
+                
+                <p class="text-lg text-gray-700 mb-8">${data.desc}</p>
+                
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <!-- Kolom 1: Fitur Utama -->
+                    <div class="p-5 rounded-xl border border-dashed border-gray-300">
+                        <h3 class="text-xl font-bold mb-4 text-gray-800 flex items-center">
+                            <span class="${data.color} mr-2">⭐</span> Fitur Kunci Layanan Ini:
+                        </h3>
+                        <ul class="space-y-3 list-none pl-0">
+                            ${featuresHtml}
+                        </ul>
+                    </div>
+                    
+                    <!-- Kolom 2: Proyek Ideal -->
+                    <div class="p-5 rounded-xl border border-dashed border-gray-300">
+                        <h3 class="text-xl font-bold mb-4 text-gray-800 flex items-center">
+                            <span class="text-yellow-600 mr-2">💡</span> Ideal Untuk Proyek:
+                        </h3>
+                        <ul class="space-y-3 list-none pl-0">
+                            ${idealForHtml}
+                        </ul>
+                    </div>
+                </div>
+            `;
+
+            selectionScreen.classList.add('hidden');
+            detailsScreen.classList.remove('hidden');
+            
+            // Scroll ke atas
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        /**
+         * Kembali ke tampilan pemilihan kategori.
+         */
+        function showSelection() {
+            detailsScreen.classList.add('hidden');
+            selectionScreen.classList.remove('hidden');
+            detailsContainer.innerHTML = ''; 
+            // Scroll ke atas saat kembali
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
